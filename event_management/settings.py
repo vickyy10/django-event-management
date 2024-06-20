@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'booking',
+    'event_admin',
 ]
 AUTH_USER_MODEL = 'home.ClientDetails'
 
