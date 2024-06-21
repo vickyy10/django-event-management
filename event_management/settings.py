@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'booking',
     'event_admin',
+    'career',
 ]
 AUTH_USER_MODEL = 'home.ClientDetails'
 

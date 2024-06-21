@@ -1,6 +1,7 @@
 from django.db import models
 
 from event_admin.models import Events
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 
@@ -9,9 +10,10 @@ from event_admin.models import Events
 
 class bookingDetails(models.Model):
     name=models.CharField(max_length=50)
-    phonenumber=models.CharField(max_length=50)
-    email=models.EmailField()
-    date=models.DateField()
+    phonenumber=PhoneNumberField()
+    email=models.EmailField(unique=True)
+    booking_date=models.DateField(auto_now_add=True)
+    Event_date=models.DateField()
     Adress_line_1=models.CharField(max_length=100)
     Adress_line_2=models.CharField(max_length=100)
     state=models.CharField(max_length=100)

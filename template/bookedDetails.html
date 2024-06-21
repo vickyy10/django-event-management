@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>heyy {{data.name}} you are booking for a {{data.event_type}} event on{{data.Event_date}} </h1>
+<h3>please confirm your details</h3>
+
+
+
+    <h5>{{data.name}}</h5>
+    <h5>{{data.phonenumber}}</h5>
+    <h5>{{data.email}}</h5>
+    <h5>{{ data.booking_date}}</h5>
+    <h5>{{data.Event_date}}</h5>
+    <h5>{{data.Adress_line_1}}</h5>
+    <h5>{{data.Adress_line_2}}</h5>
+    <h5>{{ data.state}}</h5>
+    <h5>{{data.pin}}</h5>
+    <h5>{{data.event_type}}</h5>
+    <h5>{{data.peoplestrength}}</h5>
+    
+    
+
+    
+
+
+
+{% endblock %}
