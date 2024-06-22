@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 
 from .forms import bookingDetailsForm
 from .models import bookingDetails
+
+import razorpay
 # Create your views here.
 
 
@@ -23,5 +25,10 @@ def EventBooking(request):
 def bookedDetails(request,id=0):
     
     data = bookingDetails.objects.get(id=id)
+
+    if request.method == 'POST':
+
+        # client=razorpay.Client(auth=())
+        
     
     return render(request,'bookedDetails.html',{'data':data})
